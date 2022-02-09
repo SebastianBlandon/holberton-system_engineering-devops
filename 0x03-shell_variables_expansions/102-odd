@@ -1,0 +1,2 @@
+#!/bin/bash
+wc -l2 | printf "%"
