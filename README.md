@@ -21,7 +21,7 @@
     </thead>
     <tbody>
         <tr>
-            <td><a href="https://github.com/SebastianBlandon/holberton-system_engineering-devops/tree/main/0x00-shell_basics/README.md"><code>0x00-shell_basics</code></a></td>
+            <td><a href="https://github.com/SebastianBlandon/holberton-system_engineering-devops/tree/main/0x00-shell_basics"><code>0x00-shell_basics</code></a></td>
             <td>It aims to learn about basics commands, navigation, files and directories in&nbsp;<strong>Shell</strong></td>
         </tr>
         <tr>
