@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo ps a | pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
+PROCESS=$(cat /var/run/myscript.pid | head -1)
+while :
+	do
+		trap "rm /var/run/myscript.pid" SIGQUIT
+		trap "echo I hate the kill command; rm /var/run/myscript.pid; exit" SIGTERM
+		trap "echo Y U no love me?!" SIGINT
+		echo "To infinity and beyond"
+		sleep 2
+	done
