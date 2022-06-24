@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# This script displays the bash PID.
 ./1-list_your_processes | grep bash
 # shellcheck disable=SC2009

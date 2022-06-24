@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script shows printf much times
 while :
 	do
 		trap "echo I am invincible!!!" SIGTERM
