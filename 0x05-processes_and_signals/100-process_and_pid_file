@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # This script runs various functions
+# shellcheck disable=SC2002
+# shellcheck disable=SC2034
 echo ps a | pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
 PROCESS="$(cat /var/run/myscript.pid | head -1)"
 while :
