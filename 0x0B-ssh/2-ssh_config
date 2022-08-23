@@ -1,0 +1,319 @@
+(base) usuario@MacBook-Air-de-Johan-Blandon ~/.../Repositories/holberton-system_engineering-devops/0x0B-ssh % ssh -v ubuntu@3.88.198.237
+OpenSSH_8.1p1, LibreSSL 2.7.3
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 47: Applying options for *
+debug1: /etc/ssh/ssh_config line 51: Applying options for *
+debug1: Connecting to 3.88.198.237 [3.88.198.237] port 22.
+debug1: Connection established.
+debug1: identity file /Users/usuario/.ssh/id_rsa type 0
+debug1: identity file /Users/usuario/.ssh/id_rsa-cert type -1
+debug1: identity file /Users/usuario/.ssh/id_dsa type -1
+debug1: identity file /Users/usuario/.ssh/id_dsa-cert type -1
+debug1: identity file /Users/usuario/.ssh/id_ecdsa type -1
+debug1: identity file /Users/usuario/.ssh/id_ecdsa-cert type -1
+debug1: identity file /Users/usuario/.ssh/id_ed25519 type -1
+debug1: identity file /Users/usuario/.ssh/id_ed25519-cert type -1
+debug1: identity file /Users/usuario/.ssh/id_xmss type -1
+debug1: identity file /Users/usuario/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.2p1 Ubuntu-4ubuntu0.4
+debug1: match: OpenSSH_8.2p1 Ubuntu-4ubuntu0.4 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to 3.88.198.237:22 as 'ubuntu'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ecdsa-sha2-nistp256 SHA256:YgtwI271RlVRrkZk7au5mPk+yw3VD9fOoXLNP5IlNeA
+debug1: Host '3.88.198.237' is known and matches the ECDSA host key.
+debug1: Found key in /Users/usuario/.ssh/known_hosts:17
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /Users/usuario/.ssh/id_rsa RSA SHA256:NfB2EdftdoIGQG2W2C3OgQnSX2TgPkwuEJRTTqZonag
+debug1: Will attempt key: /Users/usuario/.ssh/id_dsa 
+debug1: Will attempt key: /Users/usuario/.ssh/id_ecdsa 
+debug1: Will attempt key: /Users/usuario/.ssh/id_ed25519 
+debug1: Will attempt key: /Users/usuario/.ssh/id_xmss 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /Users/usuario/.ssh/id_rsa RSA SHA256:NfB2EdftdoIGQG2W2C3OgQnSX2TgPkwuEJRTTqZonag
+debug1: Server accepts key: /Users/usuario/.ssh/id_rsa RSA SHA256:NfB2EdftdoIGQG2W2C3OgQnSX2TgPkwuEJRTTqZonag
+debug1: Authentication succeeded (publickey).
+Authenticated to 3.88.198.237 ([3.88.198.237]:22).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: network
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: Remote: /home/ubuntu/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Remote: /home/ubuntu/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Sending environment.
+debug1: Sending env LC_CTYPE = UTF-8
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1022-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Aug 23 04:10:15 UTC 2022
+
+  System load:  0.0                Processes:             109
+  Usage of /:   11.3% of 19.32GB   Users logged in:       0
+  Memory usage: 25%                IPv4 address for eth0: 10.250.24.151
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+40 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Mon Aug 22 18:31:50 2022 from 181.234.47.39
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@4543-web-01:~$ ls
+ubuntu@4543-web-01:~$ ls -ls
+total 0
+ubuntu@4543-web-01:~$ ls -la
+total 32
+drwxr-xr-x 4 ubuntu ubuntu 4096 Aug 22 18:29 .
+drwxr-xr-x 3 root   root   4096 Aug 15 05:08 ..
+-rw------- 1 ubuntu ubuntu    5 Aug 22 18:29 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Feb 25  2020 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 Aug 22 18:28 .cache
+-rw-r--r-- 1 ubuntu ubuntu  807 Feb 25  2020 .profile
+drwx------ 2 ubuntu ubuntu 4096 Aug 15 05:08 .ssh
+ubuntu@4543-web-01:~$ pwd
+/home/ubuntu
+ubuntu@4543-web-01:~$ cd .ssh/
+ubuntu@4543-web-01:~/.ssh$ ls
+authorized_keys
+ubuntu@4543-web-01:~/.ssh$ ls -la
+total 12
+drwx------ 2 ubuntu ubuntu 4096 Aug 15 05:08 .
+drwxr-xr-x 4 ubuntu ubuntu 4096 Aug 22 18:29 ..
+-rw------- 1 ubuntu ubuntu  981 Aug 15 05:08 authorized_keys
+ubuntu@4543-web-01:~/.ssh$ cat authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6sxwlZLTk4k1ShV8/D0Vab3mg2IuX81Iye+76g/sA8cuN8oYFT970RJbCiZ5nscdejO0TN6GVK4PRrAsaEuEJFXRXj4oUDPOJPTi3b0iSwvZP09MlEZKojJ1yQ+GDpswa2Nq1inpzTji/t2EEOF19wx3y+83EAMkIZNyERVnylu74aCgLDgS95E1U1usE6XeZ1s8bT5r0rhSqItSekg/X9wf1/uYusWXdt9S30Yt2DJLEebSe0J6TQuGD+zozcSUwjsneuXlxAYEEimH+0TDfcUH8INObEnbA4t064Mx/MD02pWSDSpoTgUYzA9Gi7rxk4aLBaD2rZ+wpHZpBw8/5 StudentKey
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC1VBsVhjwrm1CZCb3uHOzpk/hUWJ85ods6la9Ra27opieZ6zI8EohvYtI0kcLsKB0Stz9IQ58+G9cYkqlgS76hpJlczR+mD6ZBBlhxYc2u1osQXzXCkVGZv/Nm8HZXHVgvt+7ZBNndglDiDlZjBalc4n0k3/2/RNTkFuMO9sLrWd2TYJ0uTdXrV0OPRdHRmILRgJ4BgUG247FebdJi116o2sDEj0xPiZw0aN5kDeEahFBNHKHMKYqwXAIqf0XzUD/6UWfRkeHr6J3P6sHMjrsYsiAbJJSIS0G5PnV52Q3D9H+pFDomAFCruiQL6mEKzmK7VJQdHjIhAPaSAhWo/uoz9XhvbcbYMUK1Z7LN1clGfXn87RZ8d104YPRzXgHe/BOA6XVtd6tRZIQ8Uy6nB7680aabIQLRXqIvbVBt6PGIf2fQaoDagchlRkUkP7vyo68oOBJmDv19CW7EhLnKtJCbZgbNEJtW/6DuepL0pyeM6A2FWGj32S0VvDPc+SxfW/U= usuario@AirdeJonBlandon.domain.name
+ubuntu@4543-web-01:~/.ssh$ cd
+ubuntu@4543-web-01:~$ pwd
+/home/ubuntu
+ubuntu@4543-web-01:~$ cd ..
+ubuntu@4543-web-01:/home$ ls
+ubuntu
+ubuntu@4543-web-01:/home$ cd ..
+ubuntu@4543-web-01:/$ ls
+bin   dev  home  lib32  libx32      media  opt   root  sbin  srv  tmp  var
+boot  etc  lib   lib64  lost+found  mnt    proc  run   snap  sys  usr
+ubuntu@4543-web-01:/$ cd etc/
+ubuntu@4543-web-01:/etc$ ls
+NetworkManager                 hosts.allow             pollinate
+PackageKit                     hosts.deny              popularity-contest.conf
+X11                            init.d                  profile
+acpi                           initramfs-tools         profile.d
+adduser.conf                   inputrc                 protocols
+alternatives                   iproute2                python3
+apparmor                       iscsi                   python3.8
+apparmor.d                     issue                   rc0.d
+apport                         issue.net               rc1.d
+apt                            kernel                  rc2.d
+at.deny                        kernel-img.conf         rc3.d
+bash.bashrc                    landscape               rc4.d
+bash_completion                ld.so.cache             rc5.d
+bash_completion.d              ld.so.conf              rc6.d
+bindresvport.blacklist         ld.so.conf.d            rcS.d
+binfmt.d                       ldap                    resolv.conf
+byobu                          legal                   rmt
+ca-certificates                libaudit.conf           rpc
+ca-certificates.conf           libblockdev             rsyslog.conf
+ca-certificates.conf.dpkg-old  locale.alias            rsyslog.d
+calendar                       locale.gen              screenrc
+cloud                          localtime               security
+console-setup                  logcheck                selinux
+cron.d                         login.defs              services
+cron.daily                     logrotate.conf          shadow
+cron.hourly                    logrotate.d             shadow-
+cron.monthly                   lsb-release             shells
+cron.weekly                    ltrace.conf             skel
+crontab                        lvm                     sos
+cryptsetup-initramfs           machine-id              ssh
+crypttab                       magic                   ssl
+dbus-1                         magic.mime              subgid
+dconf                          mailcap                 subgid-
+debconf.conf                   mailcap.order           subuid
+debian_version                 manpath.config          subuid-
+default                        mdadm                   sudoers
+deluser.conf                   mime.types              sudoers.d
+depmod.d                       mke2fs.conf             sysctl.conf
+dhcp                           modprobe.d              sysctl.d
+dpkg                           modules                 systemd
+e2scrub.conf                   modules-load.d          terminfo
+ec2_version                    mtab                    timezone
+environment                    multipath.conf          tmpfiles.d
+ethertypes                     nanorc                  ubuntu-advantage
+fonts                          netplan                 ucf.conf
+fstab                          network                 udev
+fuse.conf                      networkd-dispatcher     udisks2
+fwupd                          networks                ufw
+gai.conf                       newt                    update-manager
+groff                          nsswitch.conf           update-motd.d
+group                          opt                     update-notifier
+group-                         os-release              usb_modeswitch.conf
+grub.d                         overlayroot.conf        usb_modeswitch.d
+gshadow                        overlayroot.local.conf  vim
+gshadow-                       pam.conf                vmware-tools
+gss                            pam.d                   vtrgb
+hdparm.conf                    passwd                  wgetrc
+hibagent-config.cfg            passwd-                 xattr.conf
+hibinit-config.cfg             perl                    xdg
+host.conf                      pki                     zsh_command_not_found
+hostname                       pm
+hosts                          polkit-1
+ubuntu@4543-web-01:/etc$ cd ssh/
+ubuntu@4543-web-01:/etc/ssh$ ls -la
+total 588
+drwxr-xr-x  4 root root   4096 Aug 15 05:08 .
+drwxr-xr-x 95 root root   4096 Aug 16 06:26 ..
+-rw-------  1 root root    589 Aug 15 05:08 id_rsa.pub
+-rw-r--r--  1 root root 535195 Dec  2  2021 moduli
+-rw-r--r--  1 root root   1603 Dec  2  2021 ssh_config
+drwxr-xr-x  2 root root   4096 Dec  2  2021 ssh_config.d
+-rw-------  1 root root   1393 Aug 15 05:08 ssh_host_dsa_key
+-rw-r--r--  1 root root    611 Aug 15 05:08 ssh_host_dsa_key.pub
+-rw-------  1 root root    513 Aug 15 05:08 ssh_host_ecdsa_key
+-rw-r--r--  1 root root    183 Aug 15 05:08 ssh_host_ecdsa_key.pub
+-rw-------  1 root root    411 Aug 15 05:08 ssh_host_ed25519_key
+-rw-r--r--  1 root root    103 Aug 15 05:08 ssh_host_ed25519_key.pub
+-rw-------  1 root root   2610 Aug 15 05:08 ssh_host_rsa_key
+-rw-r--r--  1 root root    575 Aug 15 05:08 ssh_host_rsa_key.pub
+-rw-r--r--  1 root root    342 Apr 19 19:33 ssh_import_id
+-rw-r--r--  1 root root   3287 Apr 19 19:34 sshd_config
+drwxr-xr-x  2 root root   4096 Dec  2  2021 sshd_config.d
+ubuntu@4543-web-01:/etc/ssh$ cat ssh_config
+
+# This is the ssh client system-wide configuration file.  See
+# ssh_config(5) for more information.  This file provides defaults for
+# users, and the values can be changed in per-user configuration files
+# or on the command line.
+
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Include /etc/ssh/ssh_config.d/*.conf
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+#   PasswordAuthentication yes
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_ed25519
+#   Port 22
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+#   VisualHostKey no
+#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+#   RekeyLimit 1G 1h
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+ubuntu@4543-web-01:/etc/ssh$ vi ssh_config
+ubuntu@4543-web-01:/etc/ssh$ sudo vi ssh_config
+ubuntu@4543-web-01:/etc/ssh$ cat ssh_config
+
+# This is the ssh client system-wide configuration file.  See
+# ssh_config(5) for more information.  This file provides defaults for
+# users, and the values can be changed in per-user configuration files
+# or on the command line.
+
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Include /etc/ssh/ssh_config.d/*.conf
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+    PasswordAuthentication no
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_ed25519
+#   Port 22
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+#   VisualHostKey no
+#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+#   RekeyLimit 1G 1h
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+ubuntu@4543-web-01:/etc/ssh$ 
