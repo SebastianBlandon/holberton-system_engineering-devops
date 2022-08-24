@@ -5,6 +5,6 @@ sudo apt-get update
 sudo apt install nginx -y
 sudo chown -R ubuntu /var/www
 echo "Hello World" > /var/www/html/index.nginx-debian.html
-new_string="server_name _;\n\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;\n\t}"
-sudo sed -i "0,/server_name _;/{s|server_name _;|$new_string|}" /etc/nginx/sites-available/default
+replace="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+sudo sed -i "53i\ $replace" /etc/nginx/sites-available/default
 sudo service nginx start
