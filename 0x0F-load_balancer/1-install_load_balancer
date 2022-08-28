@@ -3,5 +3,5 @@
 
 sudo apt -y update
 sudo apt install -y haproxy
-sudo sed -i "/errorfile 504 \/etc\/haproxy\/errors\/504.http/a frontend http_front\n\t bind *:80\n\t default_backend http_back\n \nbackend http_back\n\t balance roundrobin\n\t server ubuntu 54.234.162.16:80\n\t server ubuntu 54.227.109.16:80" /etc/haproxy/haproxy.cfg
+sudo sed -i "/errorfile 504 \/etc\/haproxy\/errors\/504.http/a frontend http_front\n\t bind *:80\n\t default_backend http_back\n \nbackend http_back\n\t balance roundrobin\n\t server ubuntu 3.88.198.237:80\n\t server ubuntu 54.83.236.78:80" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
