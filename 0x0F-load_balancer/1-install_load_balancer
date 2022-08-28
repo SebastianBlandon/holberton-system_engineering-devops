@@ -1,23 +1,7 @@
 #!/usr/bin/env bash
-# Script that configures a load balancer
+# Installing and configuring HAproxy on my server.
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install haproxy
-
-sudo chown -R ubuntu /etc/haproxy
-
-configuration="\
-
-frontend http
-	bind *:80
-	mode http
-	default_backend web-server
-backend web-server
-	balance roundrobin
-	server 4543-web-01 3.88.198.237 check
-	server 4543-web-02 54.83.236.78 check
-"
-
-sudo echo "$configuration" >> /etc/haproxy/haproxy.cfg
+sudo apt -y update
+sudo apt install -y haproxy
+sudo sed -i "/errorfile 504 \/etc\/haproxy\/errors\/504.http/a frontend http_front\n\t bind *:80\n\t default_backend http_back\n \nbackend http_back\n\t balance roundrobin\n\t server ubuntu 54.234.162.16:80\n\t server ubuntu 54.227.109.16:80" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
