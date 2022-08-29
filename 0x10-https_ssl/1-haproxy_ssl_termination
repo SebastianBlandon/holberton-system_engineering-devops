@@ -7,6 +7,8 @@ global
 	user haproxy
 	group haproxy
 	daemon
+	maxconn 2048
+	tune.ssl.default-dh-param 2048
 
 	# Default SSL material locations
 	ca-base /etc/ssl/certs
@@ -41,7 +43,7 @@ frontend http_front
         default_backend http_back
 
 frontend https_front
-        bind *:443 ssl crt /etc/haproxy/certs/www.pacho.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.blandon.tech.pem
         reqadd X-Forwarded-Proto:\ https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
