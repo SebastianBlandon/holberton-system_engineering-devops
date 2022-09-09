@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
         with open(id + '.csv', 'w', newline='') as csv_file:
             csv_writer = csv.writer(csv_file, delimiter=',',
-                                   quotechar='"', quoting=csv.QUOTE_ALL)
+                                    quotechar='"', quoting=csv.QUOTE_ALL)
             for task in json_todo:
                 TASK_COMPLETED_STATUS = task.get('completed')
                 TASK_TITLE = task.get('title')
