@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-"""Gather data from API"""
+"""
+    Export to JSON
+    Using what you did in the task #0,
+    extend your Python script to export data in the JSON format.
+"""
 
+import json
 from requests import get
 from sys import argv, exit
 
@@ -17,30 +22,26 @@ if __name__ == "__main__":
 
     request_user = get(url_user)
     request_todo = get(url_todo)
-    # Connection and have an access to the json
     try:
         json_user = request_user.json()
         json_todo = request_todo.json()
     except ValueError:
         print("No Json")
 
-    # Assign values
     if json_user and json_todo:
-        EMPLOYEE_NAME = json_user[0].get('name')
-        NUMBER_OF_DONE_TASKS = 0
+        USER_ID = id
+        USERNAME = json_user[0].get('username')
+
+        json_list = []
         for task in json_todo:
-            if task.get('completed'):
-                NUMBER_OF_DONE_TASKS += 1
-        TOTAL_NUMBER_OF_TASKS = len(json_todo)
+            TASK_TITLE = task.get('title')
+            TASK_COMPLETED_STATUS = task.get('completed')
+            taskdict = {"task": TASK_TITLE,
+                        "completed": TASK_COMPLETED_STATUS,
+                        "username": USERNAME}
+            json_list.append(taskdict)
 
-        # Print first line
-        print("Employee {} is done with tasks({}/{}):"
-              .format(EMPLOYEE_NAME,
-                      NUMBER_OF_DONE_TASKS,
-                      TOTAL_NUMBER_OF_TASKS))
+        json_result = {USER_ID: json_list}
 
-        # Second and N lines
-        for doing in json_todo:
-            TASK_TITLE = doing.get('title')
-            if doing.get('completed'):
-                print("\t {}".format(TASK_TITLE))
+        with open(id + '.json', 'w', newline='') as json_file:
+            json.dump(json_result, json_file)
