@@ -29,19 +29,28 @@ if __name__ == "__main__":
         print("No Json")
 
     if json_user and json_todo:
-        USER_ID = id
-        USERNAME = json_user[0].get('username')
+        json_re = {}
+        user_names = {}
+        for user in json_user:
+            USER_ID = user.get('id')
+            USERNAME = user.get('username')
+            json_re[USER_ID] = []
+            user_names[USER_ID] = USERNAME
 
-        json_list = []
+        # create the value of the dict of the final json file
+        # jslist = jsresult[USER_ID]
         for task in json_todo:
             TASK_TITLE = task.get('title')
             TASK_COMPLETED_STATUS = task.get('completed')
+            # write the internal dict
+            user_id = task.get("userId")
             taskdict = {"task": TASK_TITLE,
                         "completed": TASK_COMPLETED_STATUS,
-                        "username": USERNAME}
-            json_list.append(taskdict)
+                        "username": user_names.get(user_id)}
 
-        json_result = {USER_ID: json_list}
+            if json_re.get(user_id) is not None:
+                json_re.get(user_id).append(taskdict)
 
-        with open(id + '.json', 'w', newline='') as json_file:
-            json.dump(json_result, json_file)
+        # generate the jsonfile
+        with open('todo_all_employees.json', 'w', newline='') as jsonfile:
+            json.dump(json_re, jsonfile)
