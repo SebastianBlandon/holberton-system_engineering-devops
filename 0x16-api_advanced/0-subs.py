@@ -9,9 +9,7 @@ url = 'https://www.reddit.com/'
 
 
 def number_of_subscribers(subreddit):
-    """
-        If not a valid subreddit, return 0.
-    """
+    # If not a valid subreddit, return 0.
     path = 'r/{}/about/.json'.format(subreddit)
 
     response = requests.get("{}{}".format(url, path), allow_redirects=False)
